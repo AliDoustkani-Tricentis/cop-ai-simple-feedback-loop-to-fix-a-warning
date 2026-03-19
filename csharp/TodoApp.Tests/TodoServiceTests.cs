@@ -59,4 +59,17 @@ public class TodoServiceTests
 
         Assert.Empty(service.GetAllItems());
     }
+
+    [Fact]
+    public void AddItem_WithEmptyStrings_AddsItem()
+    {
+        var service = new TodoService();
+
+        service.AddItem(string.Empty, string.Empty, 1);
+
+        var items = service.GetAllItems();
+        Assert.Single(items);
+        Assert.Equal(string.Empty, items[0].Title);
+        Assert.Equal(string.Empty, items[0].Description);
+    }
 }
