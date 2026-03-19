@@ -12,7 +12,7 @@ public class TodoService
     }
 
     // Should store priority and sort items by priority
-    public void AddItem(string title, string description, int priority)
+    public void AddItem(string? title, string? description, int priority)
     {
         var item = new TodoItem
         {
