@@ -2,8 +2,6 @@ namespace TodoApp;
 
 class Program
 {
-    private static string _version = "1.0.0";
-
     static void Main(string[] args)
     {
         var service = new TodoService();

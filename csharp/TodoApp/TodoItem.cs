@@ -7,8 +7,6 @@ public class TodoItem
     public bool IsCompleted { get; set; }
     public DateTime CreatedAt { get; set; }
 
-    private int _internalId = 0;
-
     public void MarkComplete()
     {
         IsCompleted = true;
